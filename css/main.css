@@ -1,0 +1,241 @@
+			*{ margin: 0; padding: 0; }
+			body {
+				padding-top: 20px;
+				padding-bottom: 40px;
+				color: #444;
+				font: 16px/1.5 "Roboto Slab", 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			}
+			.header {
+				font-size: 1.0em;
+			}
+			.index_title {
+				text-align: center;
+				font-size: 2.5em;
+				margin-top: 1em;
+			}
+			.top_name {
+				text-align: center;
+				font-size: 2.0em;
+				border-bottom: solid 2px #444;
+				padding-bottom: 10px;
+				margin-bottom: 10px;
+			}
+			.top_name a, .top_name a:hover {
+				color: #444;
+				text-decoration: none;
+			}
+
+			/* Custom container */
+			.container-narrow {
+				margin: 0 auto;
+				max-width: 700px;
+			}
+			.container-narrow > hr {
+				margin: 30px 0;
+			}
+
+			#posts {
+				list-style-type: none;
+				margin: 0px;
+				padding: 0px;
+				margin-top: 30px;
+			}
+			#posts li {
+				display: list-item;
+				margin-bottom: 15px;
+			}
+			#post li {
+				margin-bottom: 0.55em;
+			}
+			.post_tags {
+				font-size: 0.725em;
+				margin-left: 10px;
+			}
+			.social_icons {
+				margin-bottom: 3em;
+				margin-top: 4em;
+				padding-top: 1.5em;
+				border-top: solid 1px #ccc;
+			}
+			.social_icons img {
+				opacity: 0.3;
+			}
+			.main_icon img {
+				margin-left: 20px;
+			}
+			.navbartop {
+				height: 2.8em;
+			}
+			#post {
+				text-align: justify;
+			}
+			#post h1 {
+				font-size: 1.6em;
+			}
+			blockquote {
+				font: 400 20px/30px "Vollkorn";
+				font-style: italic;
+				border-left: 4px solid #CCC;
+				padding: 10px 0px 1px 15px;
+			}
+			blockquote p {
+				font-size: 1.0em;
+			}
+			.pullquote {
+				line-height: 1.4em;
+				font-size: 1.3em;
+				border: 0;
+				padding: 0;
+				font-style: italic;
+				margin: 30px 100px;
+			}
+			.pullquote p {
+				text-indent: -8px;
+				line-height: 20px;
+			}
+			cite, cite a {
+				color: #c90707;
+				font: 400 1.0em/1.2em "Vollkorn";
+				font-style: italic;
+			}
+
+			#footnote_box {
+				font-size: 1.0em;
+				background: #eee;
+				padding: 10px 0px 0px 10px;
+				margin: 10px;
+				border: 1px solid #aaa;
+				-moz-box-shadow: 0px 0px 10px #444;
+				-webkit-box-shadow: 0px 0px 10px #444;
+				box-shadow: 0px 0px 10px #444;
+			}
+
+			#footnotediv {
+				font-size: 1.0em;
+				background-color: #fbfbfb;
+				padding: 10px 0px 0px 10px;
+				border: 1px solid #CDBBB5;
+				box-shadow: 0px 0px 10px #444;
+				-moz-box-shadow: 0px 0px 10px #444;
+				-webkit-box-shadow: 0px 0px 10px #444;
+			}
+			.footnotes {
+				font-size: 0.9em;
+				color: #555;
+			}
+			sup {
+				top: -1em;
+				line-height: 0;
+				padding: 0;
+				font-size: 0.825em;
+				position: relative;
+				display: inline-block;
+			}
+			sup a {
+				font-weight: bold;
+				text-decoration: underline;
+				padding: 0 4px 5px 4px;
+				margin: 0;
+			}
+
+			#post h3 {
+				margin-top: 1.0em;
+				margin-bottom: 0.5em;
+			}
+			#post h4 {
+				margin-top: 1.0em;
+				margin-bottom: 0.5em;
+			}
+			#post p {
+				margin-bottom: 1em;
+			}
+			#post img {
+				margin: 10px;
+			}
+			#footer {
+				font-family: 'Fjalla One';
+				border-top: solid 1px #ccc;
+				font-size: 0.9em;
+				margin-top: 1em;
+				padding-top: 1em;
+			}
+			.nolinkcolor a {
+				color: #444;
+			}
+			#posts time {
+				width: 70px;
+				display: inline-block;
+				white-space: nowrap;
+				color: #444;
+			}
+			h3.date_title {
+				color: #777;
+				border-bottom: solid 1px #ddd;
+				margin-top: 40px;
+			}
+			a {
+				color: #06C;
+			}
+			#website-content {
+				min-height: 300px;
+				padding-top: 1em;
+			}
+			.pheader {
+				margin-top: 30px;
+			}
+			.container-narrow {
+				max-width: 600px;
+			}
+			.email_form_desc {
+				font-size: 0.9em;
+			}
+
+			.post-author-side {
+				display: block;
+			}
+			.post-author-card {
+				position: relative;
+				width: 150px;
+				margin-left: -220px;
+				float: left;
+				text-align: center;
+				padding: 5px 5px 0;
+				overflow: hidden;
+				margin-top: -100px;
+			}
+			.post-author-card p {
+				margin-top: 1.0em;
+				font-style: italic;
+				font-weight: 400;
+				font-size: 0.825em;
+				word-wrap: break-word;
+				line-height: 1.4;
+			}
+			.post-author-card h3 {
+				font-size: 1.2em;
+			}
+			.post-author-card a, .post-author-card a:hover {
+				color: #444;
+				text-decoration: none;
+		}
+		.video {
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 30px;
+			height: 0;
+			overflow: hidden;
+		}
+
+		.video object,
+		.video embed,
+		.video iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.gist {
+			font-size: 0.825em;
+		}
+

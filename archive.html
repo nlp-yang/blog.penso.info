@@ -1,0 +1,30 @@
+---
+layout: default
+title: Archive
+---
+
+<h3 class="index_title hidden-phone">{{ page.title }}</h3>
+
+  {% for post in site.posts %}
+    {% unless post.next %}
+		<h3 class="date_title">{{ post.date | date: '%Y' }}</h3>
+      <ul class="this" id="posts">
+    {% else %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+      {% if year != nyear %}
+        </ul>
+        <h3 class="date_title">{{ post.date | date: '%Y' }}</h3>
+        <ul class="past" id="posts">
+      {% endif %}
+    {% endunless %}
+		<li>
+		<div class="pull-right post_tags hidden-phone">
+			{{ post.categories | join: ', '}}
+		</div>
+		<time>{{ post.date | date:"%d %b" }} </time>
+		›
+		<a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+  {% endfor %}
+</ul>
