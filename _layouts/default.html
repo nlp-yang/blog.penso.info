@@ -108,9 +108,11 @@
 			</div>
 			<div class="clearfix"></div>
 
-			<div class="post-author-side hidden-phone">
+			<div class="post-author-side hidden-phone" id="stick-avatar">
 				<div class="post-author-card">
-					<a href="/"><img src="/img/avatar.jpg" class="img-circle" width="95" alt="Me" /></a>
+					<div class="picture">
+						<a href="/"><img src="/img/avatar.jpg" class="img-circle" width="95" alt="Me" /></a>
+					</div>
 					<p class="muted">
 					Rails&amp;iOS, Photographer, Nomad.
 					</p>
@@ -155,6 +157,17 @@
 				 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 				 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 				 })();
+
+				// Cache selectors outside callback for performance. 
+/*
+				var $window = $(window),
+				$stickyEl = $('#stick-avatar'),
+				elTop = $stickyEl.offset().top;
+
+				$window.scroll(function() {
+					$stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
+				});
+				*/
 			 </script>
 		</div>
 	</body>

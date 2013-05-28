@@ -203,9 +203,14 @@
 				overflow: hidden;
 				margin-top: -100px;
 			}
+			#stick-avatar.sticky {
+				position: fixed;
+				top: 100px;
+				opacity: 0.3;
+				filter:alpha(opacity=30);
+			}
 			.post-author-card p {
 				margin-top: 1.0em;
-				font-style: italic;
 				font-weight: 400;
 				font-size: 0.825em;
 				word-wrap: break-word;
@@ -238,4 +243,18 @@
 		.gist {
 			font-size: 0.825em;
 		}
-
+		.picture {
+			-moz-border-radius: 450px;
+			-webkit-border-radius: 450px;
+			-o-border-radius: 450px;
+			-ms-border-radius: 450px;
+			-khtml-border-radius: 450px;
+			-webkit-box-shadow: 0 2px 3px rgba(0,0,0,.25);
+			-moz-box-shadow: 0 2px 3px rgba(0,0,0,.25);
+			box-shadow: 0 2px 3px rgba(0,0,0,.25);
+			border: 2px white solid;
+			width: 95px;
+			height: 95px;
+			margin: auto;
+			padding: 0px;
+		}
