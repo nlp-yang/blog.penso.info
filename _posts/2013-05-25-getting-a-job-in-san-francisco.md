@@ -306,6 +306,12 @@ A list of things you should have before applying anywhere:
   Objective-C, Ruby, Python, Java (Android).
 * A Linkedin page, startups use it a lot (and so do annoying recruiters).
 
+#### Update 26th May, 2013
+
+This post got featured on [Hacker
+News](https://news.ycombinator.com/item?id=5767435) on #3 position. I suggest
+reading the comments for further information.
+
 * * * *
 
 Well this blog post became much longer than I expected, I hope you found it
@@ -316,12 +322,6 @@ anyway telling me how to improve it.
 You can stay up to date via [my RSS feed](/atom.xml).
 
 Thanks for reading.
-
-#### Update 26th May, 2013
-
-This post got featured on [Hacker
-News](https://news.ycombinator.com/item?id=5767435) on #3 position. I suggest
-reading the comments for further information.
 
 [^1]: People born in Paris, or living in Paris for a long time.
 [^2]: TweetSell.it: a service gathering all Tweets about sales, parsing the item and its price. See [a video](http://www.youtube.com/watch?v=uIAzeoT3MEc) demonstration I did, as the website is now offline.

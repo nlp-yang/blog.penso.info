@@ -18,10 +18,22 @@ Make sure your `Gemfile` includes `gem 'capistrano-unicorn'`, and you have to
 make sure you created a settings file in `config/unicorn/production.rb` (yes, a
 unicorn directory).
 
+#### Update 29th May, 2013
+
+[A patch](https://github.com/sosedoff/capistrano-unicorn/commit/8b9104066980e9a19a4654865382a77e460f5737) applied to `capistrano-unicorn` today allows you to specify the
+configuration file, you can use for capistrano-unicorn ~> 0.1.9:
+
+{% highlight ruby %}
+set :unicorn_config_filename, 'rainbows/production.rb'
+{% endhighlight %}
+
+#### Configuration file
+
 Mine includes using EventMachine, as I want an async stack for using
 `sinatra-sse`.
 
 {% highlight ruby %}
+# rainbows/production.rb
 Rainbows! do
   use :EventMachine
   worker_connections 1024
