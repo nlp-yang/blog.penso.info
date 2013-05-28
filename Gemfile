@@ -8,6 +8,7 @@ gem 'chronic'
 gem 'google-api-client'
 gem 'psych'
 gem 'htmlentities'
+gem 'deadweight'
 
 #gem 'pandoc-ruby'
 #gem 'rdiscount'
