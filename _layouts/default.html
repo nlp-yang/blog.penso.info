@@ -43,8 +43,8 @@
 		<meta content="{{ page.description | escape }}" property="og:description" />
 		<meta name="twitter:description" content="{{ page.description | escape }}" />
 		{% elsif page.content %}
-		<meta content="{{ page.content | strip_html | truncate: 150 | strip_newlines_with_space | escape }}" property="og:description" />
-		<meta name="twitter:description" content="{{ page.content | strip_html | truncate: 150 | | strip_newlines_with_space | escape }}" />
+		<meta content="{{ page.content | strip_html | truncate: 300 | strip_newlines_with_space | escape }}" property="og:description" />
+		<meta name="twitter:description" content="{{ page.content | strip_html | truncate: 200 | | strip_newlines_with_space | escape }}" />
 		{% else %}
 		<meta content="{{ site.description | escape }}" property="og:description" />
 		<meta name="twitter:description" content="{{ site.description | escape }}" />
