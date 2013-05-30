@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Fabien Penso
-title: ! 'SFR: trÃ¨s mauvaise expÃ©rience des forfaits Ã  la carte iPhone'
+title: ! 'SFR: très mauvaise expérience des forfaits à la carte iPhone'
 date: 2009-08-20 13:23:06.000000000 +02:00
 categories:
 - iphone

@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Fabien Penso
-title: ! 'Git et Bonjour: dÃ©veloppement en rÃ©seau local'
+title: "Git et Bonjour: développement en réseau local"
 date: 2008-11-24 20:53:08.000000000 +01:00
 categories:
 - computer

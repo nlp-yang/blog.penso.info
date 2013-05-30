@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Fabien Penso
-title: ! 'J''ai franchi le pas: passage au disque SSD'
+title: "J'ai franchi le pas: passage au disque SSD"
 date: 2010-02-05 23:06:32.000000000 +01:00
 categories:
 - computer

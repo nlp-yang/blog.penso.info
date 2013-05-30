@@ -4,7 +4,7 @@ author: Fabien Penso
 title: ! 'Reportage dont vous êtes les héros : Voyage au bout du charbon'
 date: 2008-11-18 14:08:45.000000000 +01:00
 categories:
-- photography
+- photographie
 - journalisme
 ---
 <div style="text-align: center;"><embed src="http://blip.tv/play/6yK94E2HuGk" type="application/x-shockwave-flash" width="600" height="368" allowscriptaccess="always" allowfullscreen="true"></embed></div>
