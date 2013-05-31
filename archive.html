@@ -10,14 +10,14 @@ description: Archive for Fabien Penso's Blog.
   {% for post in site.posts %}
     {% unless post.next %}
 		<h3 class="date_title">{{ post.date | date: '%Y' }}</h3>
-      <ul class="this" id="posts">
+      <ul class="this posts">
     {% else %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
       {% if year != nyear %}
         </ul>
         <h3 class="date_title">{{ post.date | date: '%Y' }}</h3>
-        <ul class="past" id="posts">
+        <ul class="past posts">
       {% endif %}
     {% endunless %}
 		<li>

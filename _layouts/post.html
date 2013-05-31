@@ -5,7 +5,7 @@ layout: default
 <div id="post" itemscope="" itemtype="http://schema.org/BlogPosting">
 
 	{% if page.photo %}
-		<img src="{{ page.photo }}" alt="top photo" />
+		<img src="{{ page.photo }}" alt="top photo" itemprop="image"/>
 	{% endif %}
 
 	<h1 itemprop="name">{{ page.title }}</h1>
@@ -34,18 +34,20 @@ layout: default
 		<div class="clearfix">&nbsp;</div> 
 	</div> 
 
-</div>
-
-<div id="footer" class="muted">
-	<div class="pull-right">
-		<i class="icon-tags"></i> {{ page.categories | join: ', ' }}
-	</div>
-	Published by 
-	<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-		<span itemprop="name">
-			Fabien Penso
+	<div id="footer" class="muted">
+		<div class="pull-right">
+			<i class="icon-tags"></i> {{ page.categories | join: ', ' }}
+		</div>
+		<span itemscope="" itemtype="http://schema.org/Person">
+			Published by 
+			<span itemprop="author">
+				<span itemprop="name">
+					Fabien Penso
+				</span>
+			</span>
 		</span>
-	</span>
-	— 
-	<time datetime="{{ page.date | date_to_xmlschema}}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
+		— 
+		<time datetime="{{ page.date | date_to_xmlschema}}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
+	</div>
+
 </div>

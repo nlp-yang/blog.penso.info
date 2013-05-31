@@ -34,17 +34,17 @@
 				margin: 30px 0;
 			}
 
-			#posts {
+			.posts {
 				list-style-type: none;
 				margin: 0px;
 				padding: 0px;
 				margin-top: 30px;
 			}
-			#posts li {
+			.posts li {
 				display: list-item;
 				margin-bottom: 15px;
 			}
-			#post li {
+			.post li {
 				margin-bottom: 0.55em;
 			}
 			.post_tags {
@@ -162,7 +162,7 @@
 			.nolinkcolor a {
 				color: #444;
 			}
-			#posts time {
+			.posts time {
 				width: 70px;
 				display: inline-block;
 				white-space: nowrap;

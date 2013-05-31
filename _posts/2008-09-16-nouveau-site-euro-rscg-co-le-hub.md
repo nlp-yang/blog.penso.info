@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Fabien Penso
-title: ! 'Nouveau site Euro RSCG C&O : Le HUB'
+title: "Nouveau site Euro RSCG C&amp;O : Le HUB"
 date: 2008-09-16 20:22:31.000000000 +02:00
 categories:
 - conovae

@@ -10,14 +10,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="{{page.categories | join: ', '}}"/>
 		<meta charset="utf-8">
-		<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+		<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
 
-		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet">
+
+		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
 		<link href='//fonts.googleapis.com/css?family=Vollkorn:400italic|Roboto+Slab|Fjalla+One&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
-		<link href="/css/main.css" rel="stylesheet">
-		<link href="/css/pygments.css" rel="stylesheet">
+		<link href="/css/main.css" rel="stylesheet" />
+		<link href="/css/pygments.css" rel="stylesheet" />
 
 		<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
 		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
@@ -27,10 +28,10 @@
 
 		{% if page.title %}
 		<meta content="{{ page.title | escape }}" property="og:title" />
-		<meta name="twitter:title" content="{{ page.title | escape }}" />
+		<meta property="twitter:title" content="{{ page.title | escape }}" />
 		{% else %}
 		<meta content="{{ site.title | escape }}" property="og:title" />
-		<meta name="twitter:title" content="{{ site.title | escape }}" />
+		<meta property="twitter:title" content="{{ site.title | escape }}" />
 		{% endif %}
 
 		{% if page.title %}
@@ -41,13 +42,13 @@
 
 		{% if page.description %}
 		<meta content="{{ page.description | escape }}" property="og:description" />
-		<meta name="twitter:description" content="{{ page.description | escape }}" />
+		<meta property="twitter:description" content="{{ page.description | escape }}" />
 		{% elsif page.content %}
 		<meta content="{{ page.content | strip_html | truncate: 300 | strip_newlines_with_space | escape }}" property="og:description" />
-		<meta name="twitter:description" content="{{ page.content | strip_html | truncate: 200 | | strip_newlines_with_space | escape }}" />
+		<meta property="twitter:description" content="{{ page.content | strip_html | truncate: 200 | | strip_newlines_with_space | escape }}" />
 		{% else %}
 		<meta content="{{ site.description | escape }}" property="og:description" />
-		<meta name="twitter:description" content="{{ site.description | escape }}" />
+		<meta property="twitter:description" content="{{ site.description | escape }}" />
 		{% endif %}
 
 		{% if page.url %}
@@ -58,21 +59,21 @@
 		<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time" />
 		<meta content="{{ site.url }}/contact.html" property="article:author" />
 
-		<meta name="twitter:card" content="summary">
-		<meta name="twitter:site" content="@fabienpenso">
+		<meta property="twitter:card" content="summary" />
+		<meta property="twitter:site" content="@fabienpenso" />
 
-		<meta name="twitter:creator" content="@fabienpenso">
+		<meta property="twitter:creator" content="@fabienpenso" />
 		{% endif %}
 
 		<meta name="author" content="Fabien Penso" />
 
 		{% if page.photo %}
 		<meta content="{{ page.photo }}" property="og:image" />
-		<meta name="twitter:image:src" content="{{ page.photo }}" />
+		<meta property="twitter:image:src" content="{{ page.photo }}" />
 		{% else %}
 		{% if page.image %}
 		<meta content="{{ site.url }}/assets/img/posts/{{ page.image }}" property="og:image" />
-		<meta name="twitter:image:src" content="{{ site.url }}/assets/img/posts/{{ page.image }}" />
+		<meta property="twitter:image:src" content="{{ site.url }}/assets/img/posts/{{ page.image }}" />
 		{% endif %}
 		{% endif %}
 		{% if page.categories %}
