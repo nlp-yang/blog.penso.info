@@ -2,15 +2,17 @@
 layout: default
 ---
 
-<div id="post">
+<div id="post" itemscope="" itemtype="http://schema.org/BlogPosting">
 
 	{% if page.photo %}
 		<img src="{{ page.photo }}" alt="top photo" />
 	{% endif %}
 
-	<h1>{{ page.title }}</h1>
+	<h1 itemprop="name">{{ page.title }}</h1>
 
-	{{ content }}
+	<div itemprop="articleBody">
+		{{ content }}
+	</div>
 
 	<div class="clearfix"></div>
 
@@ -38,5 +40,12 @@ layout: default
 	<div class="pull-right">
 		<i class="icon-tags"></i> {{ page.categories | join: ', ' }}
 	</div>
-	Published by Fabien Penso — {{ page.date | date_to_string }}
+	Published by 
+	<span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+		<span itemprop="name">
+			Fabien Penso
+		</span>
+	</span>
+	— 
+	<time datetime="{{ page.date | date_to_xmlschema}}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
 </div>
