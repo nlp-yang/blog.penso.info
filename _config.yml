@@ -7,4 +7,4 @@ description: "Fabien Penso's blog"
 exclude: [".rvmrc", ".rbenv-version", "README", "Rakefile", "changelog.md", "sass_converter.rb", "Gemfile", "Gemfile.lock", ".tm_properties", "config.rb", "sass", "CNAME", "Procfile"]
 pygments: true
 permalink: /:year/:month/:day/:title/
-toplinks: ['archive', 'about', 'contact']
+toplinks: ['about', 'archive', 'contact']
