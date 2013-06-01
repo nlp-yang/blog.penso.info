@@ -38,13 +38,9 @@ layout: default
 		<div class="pull-right">
 			<i class="icon-tags"></i> {{ page.categories | join: ', ' }}
 		</div>
-		<span itemscope="" itemtype="http://schema.org/Person">
-			Published by 
-			<span itemprop="author">
-				<span itemprop="name">
-					Fabien Penso
-				</span>
-			</span>
+		Published by 
+		<span itemprop="author">
+			Fabien Penso
 		</span>
 		— 
 		<time datetime="{{ page.date | date_to_xmlschema}}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
