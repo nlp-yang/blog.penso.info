@@ -5,7 +5,9 @@ layout: default
 <div id="post" itemscope="" itemtype="http://schema.org/BlogPosting">
 
 	{% if page.photo %}
-	<img src="{{ page.photo }}" alt="{{ page.title | escape }}" itemprop="image"/>
+	<div class="post_photo">
+		<img src="{{ page.photo }}" alt="{{ page.title | escape }}" itemprop="image"/>
+	</div>
 	{% endif %}
 
 	<h1 itemprop="name">{{ page.title }}</h1>

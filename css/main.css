@@ -148,9 +148,6 @@
 			#post p {
 				margin-bottom: 1em;
 			}
-			#post img {
-				margin: 10px;
-			}
 			#footer {
 				font-family: 'Fjalla One';
 				border-top: solid 1px #ccc;
@@ -276,4 +273,7 @@
 		.archive_title h3 a, .archive_title h3 a {
 			color: #777;
 			text-decoration: none;
+		}
+		.post_photo {
+			text-align: center;
 		}
