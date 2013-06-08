@@ -6,7 +6,7 @@ date: 2013-06-09 01:15:00 +02:00
 categories: 
 - computer
 description: 15 years ago, I founded LinuxFr. I decided to create a website, I'm not sure what I'll do with it. I don't know if I want something closer to FreshMeat or Slashdot, but I bought a domain name anyway.
-photo: /img/linuxfr2_classic_back.png
+photo: http://blog.penso.info/img/linuxfr2_classic_back.png
 ---
 
 1998, Internet grows quicker than anyone expects. I'm 19 years old and still
