@@ -40,32 +40,3 @@ task :pingomatic do
     puts '! Could not ping ping-o-matic, because XMLRPC::Client could not be found.'
   end
 end
-
-desc 'Removing Comments from previous import'
-task :cleanposts do
-	require 'htmlentities'
-	coder = HTMLEntities.new
-
-	YAML::ENGINE.yamler = "psych"
-	keep_vars = %W(categories layout date title author description photo)
-	Dir.glob("_posts/*.md").each do |file|
-		puts "Working on #{file}"
-
-		content = File.read(file)
-		thing = YAML.load_file(file)
-		headers = thing.select{|key, value|
-			keep_vars.include?(key)
-		}
-
-		if (md = content.match(/^(?<metadata>---\s*\n.*?\n?)^(---\s*$\n?)/m))
-			contents = md.post_match
-			metadata = YAML.load(md[:metadata])
-
-			File.open(file, 'wb') do |opened_file|
-				opened_file.write YAML.dump(headers)
-				opened_file.write "---\n"
-				opened_file.write coder.decode(contents).gsub(/\r\n/, "\n")
-			end
-		end
-	end
-end
