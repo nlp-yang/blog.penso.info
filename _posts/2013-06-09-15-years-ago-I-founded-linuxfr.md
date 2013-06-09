@@ -9,6 +9,10 @@ description: 15 years ago, I founded LinuxFr. I decided to create a website, I w
 photo: http://blog.penso.info/img/linuxfr_logo_large.jpg
 ---
 
+*Note aux Francophones: ce billet a été traduit et posté sur [ce journal
+linuxfr](http://linuxfr.org/users/penso/journaux/il-y-a-15-ans-j-ai-fonde-linuxfr).
+Merci à [Patrick](http://linuxfr.org/users/patrick_g).*
+
 1998, Internet grows quicker than anyone expects. I'm 19 years old and still
 live at my parent's house, hang out on IRC, use FTP to download, and run
 Linux for fun. I'm a complete geek.
