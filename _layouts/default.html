@@ -93,7 +93,8 @@
 				<div class="pull-right nolinkcolor header">
 					<ul class="nav nav-pills">
 						{% for node in site.toplinks %}
-						{% if page.url contains node %}
+						{% capture node_name %}/{{ node }}.html{% endcapture %}
+						{% if node_name == page.url %}
 						<li class="active"><a href="/{{node}}.html" class="active">{{node | capitalize}}</a></li>
 						{% else %}
 						<li><a href="/{{node}}.html">{{node | capitalize}}</a></li>
