@@ -4,7 +4,7 @@ title: Packing for a 6 months trip
 categories: 
 - travel
 description: Packing for a 6 months trip. I traveled as a backpacker months per years the recent years, and ended up removing most of the stuff from my bag. This is what I pack.
-photo: /img/india_2013_blog.jpg
+photo: http://blog.penso.info/img/india_2013_blog.jpg
 ---
 
 I traveled as a backpacker months per year the recent years, and ended up
