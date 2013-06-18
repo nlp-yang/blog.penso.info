@@ -20,7 +20,8 @@ to write this blog post and links are not affiliated. If you have any brands I
 should look for, please let me know.
 
 You can view an [annotated
-photo](http://www.flickr.com/photos/penso/9056928803/) on flickr.
+photo](http://www.flickr.com/photos/penso/9056928803/) on flickr, and my
+[photography](http://www.fabienpenso.com/) from my previous trips.
 
 #### Clothes
 
@@ -108,9 +109,9 @@ use it in shady hotels when using their blankets.
 6. Headphones, to listen to Music, or use Skype.
 
 You might consider this a lot of electronics, but as a reminder I am a geek,
-and a Software Developer. It took me years to get ride of my laptop, and it's
-even more difficult when traveling for a few months. No coding possible without
-a laptop.
+and a Software Developer. It took me years to get rid of my laptop, and it's
+even more difficult when traveling for a few months, as no coding is possible
+without one.
 
 #### Medical
 
@@ -179,6 +180,16 @@ kit changes depending of my mood, sometimes the day before I leave.
 2. Cancel my phone and all internet services I'm not using.
 3. E-mail the passport and VISA copies to myself.
 4. Warn my bank about me on the move so they don't block my card.
+
+* * * *
+
+If you liked this post, drop me a note at
+[@fabienpenso](http://twitter.com/fabienpenso). If you didn't, drop me a note
+anyway telling me how to improve it.
+
+You can stay up to date via [my RSS feed](/atom.xml).
+
+Thanks for reading.
 
 [^1]: Look for [Tellason](http://www.tellason.com/) if you're in the US, [Momotaro](http://www.okayamadenim.com/collections/momotaro-jeans) if in Japan. Let me know what brands you wear.
 [^2]: iPhone 5 are great digital cameras, and it includes panoramic shots

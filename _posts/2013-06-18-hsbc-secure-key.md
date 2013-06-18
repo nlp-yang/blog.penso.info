@@ -4,7 +4,7 @@ title: HSBC Secure Key
 categories: 
 - bank
 description: HSBC is now forcing its customers to use their secure key system to connect to their bank account, and it's a mess. This is my experience trying to use it.
-photo: /img/hsbc.jpg
+photo: http://blog.penso.info/img/hsbc.jpg
 ---
 
 Recently HSBC forced all its French customers to use a Secure Key system,
