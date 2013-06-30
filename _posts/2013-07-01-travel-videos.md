@@ -8,7 +8,7 @@ categories:
 description: I traveled for a few months from July 2012 to October 2012 on Royal Enfield, and I filmed it. If you're looking for similar fun, you might like those videos.
 ---
 
-July 2012. during my last trip with [Arnaud le
+July 2012. During my last trip with [Arnaud le
 Canu](https://www.facebook.com/arnaud.lecanu), each of us carried a
 [GoPro](http://gopro.com/) camera. Arnaud spent days (weeks?) to edit what he
 brought back, and the result is finally available. Since he only traveled 3
