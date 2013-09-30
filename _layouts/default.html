@@ -13,7 +13,8 @@
 		<link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
 
 
-		<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+		<meta name="google-site-verification" content="P6q7jRVI7ZqG5HhouSAH5cr02-4D_siFely5NbU8T4I" />
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
 		<link href='//fonts.googleapis.com/css?family=Vollkorn:400italic|Roboto+Slab|Fjalla+One&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
@@ -67,6 +68,10 @@
 
 		<meta name="author" content="Fabien Penso" />
 
+		{% if page.photo_social %}
+		  <meta content="{{ page.photo_social }}" property="og:image" />
+		  <meta property="twitter:image:src" content="{{ page.photo_social }}" />
+		{% else %}
 		{% if page.photo %}
 		<meta content="{{ page.photo }}" property="og:image" />
 		<meta property="twitter:image:src" content="{{ page.photo }}" />
@@ -74,6 +79,7 @@
 		{% if page.image %}
 		<meta content="{{ site.url }}/assets/img/posts/{{ page.image }}" property="og:image" />
 		<meta property="twitter:image:src" content="{{ site.url }}/assets/img/posts/{{ page.image }}" />
+		{% endif %}
 		{% endif %}
 		{% endif %}
 		{% if page.categories %}
@@ -92,6 +98,7 @@
 			<div class="navbartop">
 				<div class="pull-right nolinkcolor header">
 					<ul class="nav nav-pills">
+						<li><a href="http://travels.penso.info" target="_blank">My Travels</a></li>
 						{% for node in site.toplinks %}
 						{% capture node_name %}/{{ node }}.html{% endcapture %}
 						{% if node_name == page.url %}
@@ -102,7 +109,7 @@
 						{% endfor %}
 					</ul>
 				</div>
-				<ul class="nav nav-pills nolinkcolor header hidden-phone">
+				<ul class="nav nav-pills nolinkcolor header hidden-sm">
 					<li>
 					<a href="/"><i class="icon-home"></i> Home</a>
 					</li>
@@ -110,15 +117,15 @@
 			</div>
 			<div class="clearfix"></div>
 
-			<div class="post-author-side hidden-phone" id="stick-avatar">
+			<div class="post-author-side hidden-sm" id="stick-avatar">
 				<div class="post-author-card">
 					<div class="picture">
 						<a href="/"><img src="/img/avatar.jpg" class="img-circle" width="95" alt="Me" /></a>
 					</div>
-					<p class="muted">
+					<p class="text-muted">
 					Rails&amp;iOS, Photographer, Nomad.
 					</p>
-					<p class="muted">
+					<p class="text-muted">
 					<a href="https://twitter.com/fabienpenso">@fabienpenso</a>
 					</p>
 				</div>
@@ -129,15 +136,6 @@
 			</div>
 
 			<div class="social_icons">
-				<div class="pull-right">
-					<form action="http://fabienpenso.us6.list-manage.com/subscribe/post?u=26988d6b101b0274a6b9db738&amp;id=771bd90ff3" 
-						method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<div class="input-append">
-							<input type="email" value="" name="EMAIL" class="input-medium" id="mce-EMAIL" placeholder="email address" required />
-							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn">
-						</div>
-					</form>
-				</div>
 				<a href="http://github.com/penso" title="Github"><img src="/img/github-icon.png" width="30" height="30" alt="Github"/></a>
 				<a href="http://twitter.com/fabienpenso" title="Twitter"><img src="/img/twitter-icon.png" width="30" height="30" alt="Twitter"/></a>
 				<a href="http://www.facebook.com/fabienpenso" title="Facebook"><img src="/img/facebook-icon.png" width="30" height="30" alt="Facebook"/></a>
@@ -147,7 +145,7 @@
 
 			<script src="http://code.jquery.com/jquery.min.js"></script>
 			<script src="/js/jquery-footnotes.min.js"></script>
-			<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 			<script type="text/javascript">
 				var _gaq = _gaq || [];
 				_gaq.push(['_setAccount', 'UA-299804-3']);

@@ -50,3 +50,6 @@ detect the opening of my door, and send myself a text message every time it
 happens. Paranoid? Not really, it allows you to know your system currently
 works, how many times do you think an alarm system hasn't been working for
 months, finding it *after* a burglar. It even happens to Banks.
+
+#### Wifi configuration
+http://svay.com/blog/setting-up-a-wifi-connection-on-the-raspberrypi/
