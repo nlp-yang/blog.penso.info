@@ -7,7 +7,7 @@ description: You’re living outside the US and want to get a job in San Francis
   This might help you getting one.
 categories:
 - computer
-photo: http://farm6.staticflickr.com/5135/5419272408_5f5e08784a_z.jpg
+photo: http://farm6.staticflickr.com/5135/5419272408_308e575d9f_z.jpg
 ---
 #### My background
 
