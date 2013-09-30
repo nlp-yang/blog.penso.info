@@ -130,7 +130,7 @@ kit changes depending of my mood, sometimes the day before I leave.
 1. Mamiya7 with 80mm lens
 2. 40 220 films (Portra 160)
 3. Rolleiflex FW with 50mm lens
-4. 20 120 a35 films (Portra 160)
+4. 20 120 films (Portra 160)
 5. Extra batteries for both cameras
 
 #### Random
