@@ -19,7 +19,7 @@ Today your blog will mostly get linked from Social Networks (Facebook, Google
 Plus, Twitter), or be found through [Google](http://www.google.com) search. You
 want to make sure you play nice with all of those.
 
-Improving your blog visibility can be summarized in 6 points:
+Improving your blog visibility can be summarized in 6 steps:
 
 1. Make your website load as fast as possible
 2. Generate clean HTML, include meta description tags and clear title
@@ -76,7 +76,7 @@ You can read the [full configuration file](https://gist.github.com/penso/5888446
 This graph comes from [Google Webmaster
 Tools](https://www.google.com/webmasters/tools/home?hl=en) and you can see the
 speed improvements I had switching from [WordPress](http://www.wordpress.com)
-to [Jekyll](http://jekyllrb.com).
+to [Jekyll](http://jekyllrb.com). I divided loading time by a factor of 3.
 
 #### B. Use a CDN
 
