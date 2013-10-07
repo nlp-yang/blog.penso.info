@@ -2,13 +2,28 @@
 layout: post
 author: Fabien Penso
 title: Getting a job in San Francisco
-date: 2013-05-25 02:35:00.000000000 +02:00
+date: 2013-05-25 02:35:00 +02:00
 description: You’re living outside the US and want to get a job in San Francisco?
   This might help you getting one.
 categories:
 - computer
 photo: http://farm6.staticflickr.com/5135/5419272408_308e575d9f_z.jpg
 ---
+#### Read this first
+
+I wrote this post because I was receiving emails from friends about my past
+experience and wanted to gather all my advices in a single post.
+
+I now receive more emails from readers than ever, at least a few per week,
+asking me questions about getting a job in San Francisco. I love you to blog,
+link, talk about this post, and if you really need to talk to me
+[@fabienpenso](http://twitter.com/fabienpenso) is best. But while I would
+*love* to answer everyone of you over email, I just can't.
+
+However, if I receive the same questions over and over again, I'll amend this
+post with more details. But please please please, don't expect me to answer
+private emails about this subject.
+
 #### My background
 
 I'm a French citizen living in Paris, I moved to San Francisco in 2010 and
