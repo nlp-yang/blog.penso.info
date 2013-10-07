@@ -1,8 +1,9 @@
 source 'https://www.rubygems.org'
-gem "jekyll", "~> 1.1.2"
+gem "jekyll", "~> 1.2.1"
 gem 'directory_watcher', "~> 1.4.1"
 gem 'sequel'
-gem 'mysqlplus'
+#gem 'mysqlplus'
+gem 'byebug'
 gem 'pygmentize'
 gem 'chronic'
 gem 'google-api-client'
