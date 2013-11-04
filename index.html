@@ -3,13 +3,6 @@ layout: default
 description: I'm a Senior Software Engineer, a photographer, and I love traveling. This is my Blog.
 ---
 
-<p>
-Glad you found me. I'm a Senior Software Engineer, <a
-	href="http://www.fabienpenso.com">a photographer</a>, and I love traveling. I'm
-always busy on various projects, usually using iOS and Ruby on Rails, and I'm
-available for you. This is my blog.
-</p>
-
 <div itemscope itemtype="http://schema.org/Blog">
   {% for post in site.posts limit:20%}
     {% unless post.next %}

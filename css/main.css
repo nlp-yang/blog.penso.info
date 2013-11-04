@@ -41,7 +41,7 @@
 			}
 			.posts li {
 				display: list-item;
-				margin-bottom: 15px;
+				margin-bottom: 8px;
 			}
 			.post li {
 				margin-bottom: 0.55em;
@@ -121,6 +121,7 @@
 			.footnotes {
 				font-size: 0.9em;
 				color: #555;
+				margin-top: 2em;
 			}
 			sup {
 				top: -1em;
@@ -170,7 +171,7 @@
 				margin-top: 40px;
 			}
 			a {
-				color: #06C;
+				color: #1685b3;
 			}
 			#website-content {
 				min-height: 300px;
@@ -277,3 +278,40 @@
 		.post_photo {
 			text-align: center;
 		}
+		mark {
+			background-color: #fdffb6;
+			padding: 2px;
+			box-shadow: #fdffb6 0 0 5px;
+			color: #444; 
+		}
+		.larger {
+			font-size: 1.2em;
+			line-height: 1.5em;
+		}
+		h3 {
+			color: #777;
+		}
+		.available_for_you {
+			text-align: center;
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+			.schedule time {
+				width: 170px;
+				display: inline-block;
+				white-space: nowrap;
+				color: #444;
+			}
+			.schedule li {
+				display: list-item;
+			}
+			.schedule {
+				list-style-type: none;
+				margin: 0px;
+				padding: 0px;
+				margin-top: 30px;
+			}
+			.bold {
+				text-align: center;
+				margin-top: 1em;
+			}

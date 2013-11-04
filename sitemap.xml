@@ -22,6 +22,12 @@ layout: nil
 		<priority>0.6</priority>
   </url>
   <url>
+    <loc>{{ site.url }}/hire.html</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+  </url>
+  <url>
     <loc>{{ site.url }}/archives.html</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
 		<changefreq>daily</changefreq>
@@ -32,7 +38,7 @@ layout: nil
     <loc>{{ site.url }}{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
 		<changefreq>weekly</changefreq>
-		<priority>0.8</priority>
+		<priority>1.0</priority>
   </url>
   {% endfor %}
 </urlset> 

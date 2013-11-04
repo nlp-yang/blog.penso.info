@@ -18,7 +18,7 @@
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
 		<link href='//fonts.googleapis.com/css?family=Vollkorn:400italic|Roboto+Slab|Fjalla+One&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
 
-		<link href="/css/main.min.css" rel="stylesheet" />
+		<link href="/css/main.css" rel="stylesheet" />
 		<link href="/css/pygments.min.css" rel="stylesheet" />
 
 		<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
@@ -98,7 +98,6 @@
 			<div class="navbartop">
 				<div class="pull-right nolinkcolor header">
 					<ul class="nav nav-pills">
-						<li><a href="http://travels.penso.info" target="_blank">My Travels</a></li>
 						{% for node in site.toplinks %}
 						{% capture node_name %}/{{ node }}.html{% endcapture %}
 						{% if node_name == page.url %}

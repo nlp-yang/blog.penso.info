@@ -24,6 +24,11 @@ However, if I receive the same questions over and over again, I'll amend this
 post with more details. But please please please, don't expect me to answer
 private emails about this subject.
 
+This post also got featured on [Hacker
+News](https://news.ycombinator.com/item?id=5767435) on #3 position. I suggest
+reading the comments for further information. I'm also <a
+href="/hire.html">available for consulting</a>.
+
 #### My background
 
 I'm a French citizen living in Paris, I moved to San Francisco in 2010 and
@@ -320,12 +325,6 @@ A list of things you should have before applying anywhere:
 * Know coding, languages often requested these days include
   Objective-C, Ruby, Python, Java (Android).
 * A Linkedin page, startups use it a lot (and so do annoying recruiters).
-
-#### Update 26th May, 2013
-
-This post got featured on [Hacker
-News](https://news.ycombinator.com/item?id=5767435) on #3 position. I suggest
-reading the comments for further information.
 
 * * * *
 
