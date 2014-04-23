@@ -28,7 +28,9 @@ Improving your blog visibility can be summarized in 6 steps:
 5. Microformats
 6. RSS Feeds and ping the oustide World when you wrote new content
 
-### Improve your blog loading speed
+* * * * *
+
+### Load as fast as possible
 
 > The speed at which your blog loads is critical to attracting more readers to
 > your blog. If your blog takes a long time to load, many readers may leave your
@@ -40,58 +42,33 @@ Improving your blog visibility can be summarized in 6 steps:
 #### A. Find your current website slow points
 
 Don't underestimate your loading speed. You should make your website load as
-fast as possible. [Google](http://www.google.com) will index you better, and
-visitors won't mind about reading and clicking around your blog if each page
+fast as possible. [Google](http://www.google.com) indexes you better, and
+visitors don't mind about reading and clicking around your blog if each page
 loads under seconds.
 
-Existing tools will help you finding about your current speed:
+[PageSpeed
+Insights](https://developers.google.com/speed/pagespeed/insights)[^1] by Google
+will list all current issues and how to fix them, while
+[Pingdom](http://tools.pingdom.com/fpt/ePnTcP/http://blog.penso.info)[^2] will
+tell you how fast your website loads compared to others.
 
-* [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)[^1] by Google
-* [Pingdom](http://tools.pingdom.com/fpt/ePnTcP/http://blog.penso.info)[^2]
-
-[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)
-will help you improving your website speed as it will list all current issues,
-and how to fix them. I use [nginx](http://wiki.nginx.org/Main) as my main
-webserver, some tags I added in my server:
-
-	# This goes into a server block in NGINX
-	location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
-		expires 1w;
-		log_not_found off;
-	}
-
-	charset UTF-8;
-
-	gzip             on;
-	gzip_vary on;
-	gzip_min_length  500;
-	gzip_proxied     expired no-cache no-store private auth;
-	gzip_types text/plain text/css application/x-javascript text/xml application/xml application/xml+rss text/javascript;
-
-You can read the [full configuration file](https://gist.github.com/penso/5888446).
-
-![Speed improvement](/img/blog_speed.png)
-{: .post_photo }
-
-This graph comes from [Google Webmaster
-Tools](https://www.google.com/webmasters/tools/home?hl=en) and you can see the
-speed improvements I had switching from [WordPress](http://www.wordpress.com)
-to [Jekyll](http://jekyllrb.com). I divided loading time by a factor of 3.
+For example, I use [nginx](http://wiki.nginx.org/Main) as my main webserver,
+and PageSpeed requested for a few changes like gzip compression. I was aware of
+such possibility, but forgot I had not enabled it on my blog. You can read the
+[full configuration file](https://gist.github.com/penso/5888446).
 
 #### B. Use a CDN
 
-Using a CDN for your JS/CSS will improve your speed, thanksfully that's very
-easy as [CloudFlare](https://www.cloudflare.com/) is hosting most Javascript
-frameworks at [cdnjs](http://cdnjs.com/), for free. I use
-[BootstrapCDN](http://www.bootstrapcdn.com/) for my
-[Bootstrap](http://twitter.github.io/bootstrap/) CSS, and I include.
+Using a CDN for your JS/CSS will improve your speed. You used to have to pay a
+lot for this, but it's now very easy as
+[CloudFlare](https://www.cloudflare.com/) is hosting most Javascript frameworks
+at [cdnjs](http://cdnjs.com/) free of charge.
 
-Using a CDN allows visitors to fetch those files from closer servers, and it
-frees your server from serving them. You'll only benefit from this.
+Using a CDN allows visitors to fetch data from closer servers, and it frees
+your server from serving them. You'll only benefit from this. I suggest only
+using minified version of the CSS and the Javascript files.
 
-Only use minified CSS and Javascript files, that helps.
-
-My HTML looks like:
+Your HTML should look like:
 
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
@@ -102,6 +79,20 @@ My HTML looks like:
 
 I personally removed the Facebook and Twitter Javascript SDKs to display share
 or follow buttons. They're nice to have but they also slow your website a lot.
+
+#### D. Switch to a static blog system
+
+![Speed improvement](/img/blog_speed.png)
+{: .post_photo }
+
+This graph from [Google Webmaster
+Tools](https://www.google.com/webmasters/tools/home?hl=en) shows speed delivery
+when I switched this blog to Jekyll. Whatever you choose, delivering static
+pages through any website generator will give an order of magnitude
+improvement. I suggest looking at [Jekyll](http://jekyllrb.com) or
+[Middleman](http://middlemanapp.com/).
+
+* * *
 
 * * *
 

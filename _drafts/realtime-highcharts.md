@@ -1,20 +1,29 @@
 --- 
 layout: post
-title: Realtime update with Highcharts, Rails and SSE (part 1)
+title: Realtime update with Highcharts, Rails and SSE
 categories: 
 - computer
+- rails
 description: Realtime update with Highcharts, with Rails and SSE.
 ---
 
-I'm currently working for [ProcessOne](http://www.process-one.net/en/) and we
-wanted to have realtime statistics with
-[highcharts](http://www.highcharts.com/). It took much longer than expected, I
-thought you might enjoy some feedback.
+__Just looking for the code?__ Check [ <i class="icon-github"></i> this github
+repository](https://github.com/penso/blog-sse/).
 
-__Just looking for the code?__ Check [this github
-repository](https://github.com/penso/blog-sse/) <i class="icon-github"></i>.
+When I need realtime analytics I use:
 
-### What this blog posts will show you
+ * [Batsd](https://github.com/noahhl/batsd) for storing datapoints.
+ * [Highcharts](http://www.highcharts.com) to display the datapoints.
+ * Server Side Events for the realtime part in the browser.
+
+I
+[patched](https://github.com/penso/batsd/commit/1e4041ad198a29a99ea7f1209847ab21126a4d47)
+batsd to send a PUBLISH Redis command everytime it stores a new entry. You can
+easily subscribe to this to deliver realtime datapoints back to the browser.
+
+[Batsd](https://github.com/noahhl/batsd) doesn't seem to be moving that much
+the past year, and I would suggest looking for an alternative or just using the
+original [statsd](https://github.com/etsy/statsd/).
 
 [Highcharts](http://www.highcharts.com) graph is nice, but these days everyone
 wants realtime and the charts only isn't enough anymore. We already use

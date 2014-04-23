@@ -1,8 +1,10 @@
 source 'https://www.rubygems.org'
-gem "jekyll", "~> 1.2.1"
-gem 'directory_watcher', "~> 1.4.1"
+gem "jekyll", "~> 1.5.1"
+gem 'directory_watcher', "~> 1.5.1"
+gem 'guard'
+gem 'guard-jekyll-plus'
+gem 'guard-livereload'
 gem 'sequel'
-#gem 'mysqlplus'
 gem 'byebug'
 gem 'pygmentize'
 gem 'chronic'
@@ -12,7 +14,5 @@ gem 'htmlentities'
 gem 'deadweight'
 gem 'rspec'
 
-#gem 'pandoc-ruby'
-#gem 'rdiscount'
 gem 'kramdown'
 gem 'mail'

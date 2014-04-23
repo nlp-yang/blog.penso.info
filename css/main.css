@@ -43,8 +43,14 @@
 				display: list-item;
 				margin-bottom: 8px;
 			}
-			.post li {
+			.post li, #post li {
 				margin-bottom: 0.55em;
+			}
+			#post ol, #post ul {
+				margin-left: 40px;
+			}
+			#post ul {
+				list-style-type:circle;
 			}
 			.post_tags {
 				font-size: 0.725em;
@@ -163,7 +169,9 @@
 				width: 70px;
 				display: inline-block;
 				white-space: nowrap;
-				color: #444;
+				color: #777;
+				padding-right: 5px;
+				text-align: right;
 			}
 			h3.date_title {
 				color: #777;
@@ -314,4 +322,7 @@
 			.bold {
 				text-align: center;
 				margin-top: 1em;
+			}
+			#post img {
+				max-width: 600px;
 			}

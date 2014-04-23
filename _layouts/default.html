@@ -7,6 +7,13 @@
 		<title>Fabien Penso</title>
 		{% endif %}
 
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
+		<link href='//fonts.googleapis.com/css?family=Vollkorn:400italic|Roboto+Slab|Fjalla+One&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+		
+		<link href="/css/main.css" rel="stylesheet" />
+		<link href="/css/pygments.min.css" rel="stylesheet" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="{{page.categories | join: ', '}}"/>
 		<meta charset="utf-8">
@@ -14,12 +21,6 @@
 
 
 		<meta name="google-site-verification" content="P6q7jRVI7ZqG5HhouSAH5cr02-4D_siFely5NbU8T4I" />
-		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
-		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
-		<link href='//fonts.googleapis.com/css?family=Vollkorn:400italic|Roboto+Slab|Fjalla+One&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css' />
-
-		<link href="/css/main.css" rel="stylesheet" />
-		<link href="/css/pygments.min.css" rel="stylesheet" />
 
 		<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
 		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml" />
@@ -142,9 +143,6 @@
 				<a href="/atom.xml"><img src="/img/rss-icon.png" width="30" height="30" alt="RSS"/></a>
 			</div>
 
-			<script src="http://code.jquery.com/jquery.min.js"></script>
-			<script src="/js/jquery-footnotes.min.js"></script>
-			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 			<script type="text/javascript">
 				var _gaq = _gaq || [];
 				_gaq.push(['_setAccount', 'UA-299804-3']);
@@ -157,16 +155,36 @@
 				 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 				 })();
 
-				// Cache selectors outside callback for performance. 
-/*
-				var $window = $(window),
-				$stickyEl = $('#stick-avatar'),
-				elTop = $stickyEl.offset().top;
+				// Add a script element as a child of the body
+				function downloadJSAtOnload() {
+					var a = ["http://code.jquery.com/jquery.min.js", "/js/jquery-footnotes.min.js", "//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"];
+					var element=null;
+					for (index = 0; index < a.length; ++index) {
+						element = document.createElement("script");
+						element.src = a[index];
+						document.body.appendChild(element);
+					}
 
-				$window.scroll(function() {
-					$stickyEl.toggleClass('sticky', $window.scrollTop() > elTop);
-				});
-				*/
+					/*
+					a = ["//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css",
+					"//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css", "//fonts.googleapis.com/css?family=Vollkorn:400italic|Roboto+Slab|Fjalla+One&amp;subset=latin,latin-ext",
+					"/css/main.min.css", "/css/pygments.min.css"];
+					for (index = 0; index < a.length; ++index) {
+						element = document.createElement("link");
+						element.href = a[index];
+						element.rel = "stylesheet";
+						document.body.appendChild(element);
+						}
+						*/
+				}
+
+				// Check for browser support of event handling capability
+				if (window.addEventListener)
+					window.addEventListener("load", downloadJSAtOnload, false);
+				else if (window.attachEvent)
+					window.attachEvent("onload", downloadJSAtOnload);
+				else window.onload = downloadJSAtOnload;
+
 			 </script>
 		</div>
 	</body>
