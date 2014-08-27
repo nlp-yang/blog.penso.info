@@ -6,7 +6,7 @@ categories:
 description: Faster capistrano deploys
 ---
 
-TL;DR — **I reduced deploy times from five minutes to less than fifteen
+TL;DR — **I reduced deploy times from 5 minutes to less than 15 
 seconds by replacing the standard Capistrano deploy tasks with a simpler,
 Git-based workflow and avoiding slow, unnecessary work.**[^1]
 
