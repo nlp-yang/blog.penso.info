@@ -90,47 +90,45 @@
 		{% endif %}
 	</head>
 	<body>
-		<div class="container-narrow">
-
 			<div class="top_name">
-				<a href="/"><b>Fabien Penso</b></a>
-			</div>
+				<div class="container-narrow">
+					<div class="hidden-xs hidden-sm" id="stick-avatar">
+						<div class="post-author-card">
+							<div class="picture">
+								<a href="/"><img src="/img/avatar.jpg" class="img-circle" width="95" alt="Me"></a>
+							</div>
+						</div>
+					</div>
+				<h1><a href="/"><b>Fabien Penso</b></a></h1>
+				<p>I'm Fabien, and this is my blog. I'm a Rails&iOS Engineer, and <a href="http://www.fabienpenso.com">a photographer</a>. I also enjoy travels.</p>
+				<div class="navbartop">
+					<div class="pull-right nolinkcolor header">
+						<ul class="nav nav-pills">
+							{% for node in site.toplinks %}
+							{% capture node_name %}/{{ node }}.html{% endcapture %}
+							{% if node_name == page.url %}
+							<li class="active"><a href="/{{node}}.html" class="active">{{node | capitalize}}</a></li>
+							{% else %}
+							<li><a href="/{{node}}.html">{{node | capitalize}}</a></li>
+							{% endif %}
+							{% endfor %}
 
-			<div class="navbartop">
-				<div class="pull-right nolinkcolor header">
-					<ul class="nav nav-pills">
-						{% for node in site.toplinks %}
-						{% capture node_name %}/{{ node }}.html{% endcapture %}
-						{% if node_name == page.url %}
-						<li class="active"><a href="/{{node}}.html" class="active">{{node | capitalize}}</a></li>
-						{% else %}
-						<li><a href="/{{node}}.html">{{node | capitalize}}</a></li>
-						{% endif %}
-						{% endfor %}
+							<li>
+							<a href="http://twitter.com/fabienpenso">@fabienpenso</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="nav nav-pills nolinkcolor">
+						<li><a href="/">Home</a></li>
 					</ul>
 				</div>
-				<ul class="nav nav-pills nolinkcolor header hidden-sm">
-					<li>
-					<a href="/"><i class="icon-home"></i> Home</a>
-					</li>
-				</ul>
+				</div>
+			<div class="clearfix"></div>
 			</div>
+
 			<div class="clearfix"></div>
 
-			<div class="post-author-side hidden-sm" id="stick-avatar">
-				<div class="post-author-card">
-					<div class="picture">
-						<a href="/"><img src="/img/avatar.jpg" class="img-circle" width="95" alt="Me" /></a>
-					</div>
-					<p class="text-muted">
-					Rails&amp;iOS, Photographer, Nomad.
-					</p>
-					<p class="text-muted">
-					<a href="https://twitter.com/fabienpenso">@fabienpenso</a>
-					</p>
-				</div>
-			</div>
-
+		<div class="container-narrow">
 			<div id="website-content">
 				{{ content }}
 			</div>
