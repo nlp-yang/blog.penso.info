@@ -6,8 +6,10 @@ categories:
 description: to be filled
 ---
 
-You want to improve your website visibility to the outside World? This post
-aims at helping you about that.
+TL;DR — **I spent years running this blog, and if you look at my page rank or
+search for any subject I blogged about, you'll find out I've achieved a pretty
+good score. This is a list of what I did which could help you about your blog
+visibility. I believe it could be applied to any website too.**
 
 Recently I moved my Blog from WordPress to Jekyll, and got the feeling to blog
 again. I've always blogged for years, but Facebook, Twitter and other social
@@ -26,7 +28,7 @@ Improving your blog visibility can be summarized in 6 steps:
 3. Integrate social networks metas for Twitter and Facebook
 4. Sitemaps, to help search Engines
 5. Microformats
-6. RSS Feeds and ping the oustide World when you wrote new content
+6. RSS Feeds and ping the oustide World once you wrote new content
 
 * * * * *
 
@@ -43,7 +45,7 @@ Improving your blog visibility can be summarized in 6 steps:
 
 Don't underestimate your loading speed. You should make your website load as
 fast as possible. [Google](http://www.google.com) indexes you better, and
-visitors don't mind about reading and clicking around your blog if each page
+visitors won't mind about reading and clicking around your blog if each page
 loads under seconds.
 
 [PageSpeed
@@ -52,10 +54,10 @@ will list all current issues and how to fix them, while
 [Pingdom](http://tools.pingdom.com/fpt/ePnTcP/http://blog.penso.info)[^2] will
 tell you how fast your website loads compared to others.
 
-For example, I use [nginx](http://wiki.nginx.org/Main) as my main webserver,
+As an example, I use [nginx](http://wiki.nginx.org/Main) as my main webserver
 and PageSpeed requested for a few changes like gzip compression. I was aware of
-such possibility, but forgot I had not enabled it on my blog. You can read the
-[full configuration file](https://gist.github.com/penso/5888446).
+such possibility but forgot I had not enabled it on my blog. You can read my 
+[full nginx configuration file](https://gist.github.com/penso/5888446).
 
 #### B. Use a CDN
 
@@ -64,21 +66,26 @@ lot for this, but it's now very easy as
 [CloudFlare](https://www.cloudflare.com/) is hosting most Javascript frameworks
 at [cdnjs](http://cdnjs.com/) free of charge.
 
-Using a CDN allows visitors to fetch data from closer servers, and it frees
-your server from serving them. You'll only benefit from this. I suggest only
+Using a CDN allows visitors to fetch data from closer servers, frees your
+server from serving them and you'll only benefit from this. I also suggest only
 using minified version of the CSS and the Javascript files.
+
+http://cssminifier.com/
+http://jscompress.com/
 
 Your HTML should look like:
 
-	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
-	<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
-	<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-	<script src="http://code.jquery.com/jquery.min.js"></script>
+{% highlight html %}
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" />
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.min.css" rel="stylesheet" />
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+{% endhighlight %}
 
 #### C. Remove all unecessary CSS/Code
 
 I personally removed the Facebook and Twitter Javascript SDKs to display share
 or follow buttons. They're nice to have but they also slow your website a lot.
+I don't think they're worth it on small websites.
 
 #### D. Switch to a static blog system
 
@@ -90,7 +97,7 @@ Tools](https://www.google.com/webmasters/tools/home?hl=en) shows speed delivery
 when I switched this blog to Jekyll. Whatever you choose, delivering static
 pages through any website generator will give an order of magnitude
 improvement. I suggest looking at [Jekyll](http://jekyllrb.com) or
-[Middleman](http://middlemanapp.com/).
+[Middleman](http://middlemanapp.com/), they're both really good.
 
 * * *
 
@@ -120,7 +127,7 @@ You should [signup for Authorship](https://plus.google.com/authorship):
 2. Make sure a byline containing your name appears on each page of your content
 (for example, "By Fabien Penso").
 3. Make sure your byline name matches the name on your Google+ profile.
-4. Verify you have an email address (such as foo@penso.info) on the same
+4. Verify you have an email address (such as foo@domain.com) on the same
 domain as your content.
 
 ### Clean HTML
@@ -197,6 +204,15 @@ are fetched properly.
 
 ### Newsletter
 
+Don't underestimate email lists. This is the only way to make sure you connect
+to your followers. Facebook pages, Twitter and pretty much every social
+networks might change the way they allow you to contact with your followers.
+Email won't change, and is more accessible to non-geeks than RSS feeds.
+
+You can even automate emails with
+[MailChimp](http://mailchimp.com/features/rss-to-email/) and their rss-to-email
+feature.
+
 ### Blog titles: important
 
 This is mostly where the magic happens, titles (and domain names) is the most
@@ -213,7 +229,10 @@ post](http://googlewebmastercentral.blogspot.com.au/2012/01/better-page-titles-i
 about improving page titles for search results. Google will actually generate
 alternate page titles if they feel yours aren't relevant enough.
 
-Page titles have to [be descriptive](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35624#3), 
+Page titles have to [be
+descriptive](http://support.google.com/webmasters/bin/answer.py?hl=en&answer=35624#3),
+and concise. [This video](http://www.youtube.com/watch?v=L3HX_8BAhB4) from Matt
+Cutts (Google) explains how Google choose titles for search results.
 
 ### RSS Feeds
 

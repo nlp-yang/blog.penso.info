@@ -152,9 +152,12 @@ just wrote my set of capistrano tasks and replaced the default `cap deploy` usin
 
 * * * *
 
+I hope you found this post useful. If you did, drop me a note at
+[@fabienpenso](http://twitter.com/fabienpenso). If you didn't, drop me a note
+anyway telling me how to improve it.
+
 You can stay up to date via [my RSS feed](/atom.xml).
 
-Thanks for reading.
 
 [^1]: This quote is stolen from [this great article](http://blog.codeclimate.com/blog/2013/10/02/high-speed-rails-deploys-with-git/) from [Code Climate](http://www.codeclimate.com/). It's also the article who convinced me to do the same way they did, except they used capistrano2 and I used capistrano3
 [^2]: I know, I know. You shouldn't do that but sometimes you need to anyway, or you're just modifying files on your staging servers.

@@ -13,6 +13,7 @@ gem 'psych'
 gem 'htmlentities'
 gem 'deadweight'
 gem 'rspec'
+gem 'rake'
 
 gem 'kramdown'
 gem 'mail'
