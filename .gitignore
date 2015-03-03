@@ -8,3 +8,5 @@ Thumbs.db
 _site
 
 .sass-cache
+
+s3_website.yml

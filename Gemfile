@@ -17,3 +17,4 @@ gem 'rake'
 
 gem 'kramdown'
 gem 'mail'
+gem 's3_website'
