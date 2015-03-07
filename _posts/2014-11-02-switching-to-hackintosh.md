@@ -3,7 +3,7 @@ layout: post
 title: Switching to Hakintosh
 categories:
 - computer
-description: to be filled
+description: Switching to Hakintosh for my daily environment
 ---
 
 TL;DR — **I bought standard PC hardware components and I'm waiting for its
