@@ -3,16 +3,30 @@ layout: post
 title: Realtime update with Highcharts, Rails and SSE
 categories: 
 - computer
-- rails
 description: Realtime update with Highcharts, with Rails and SSE.
+date: 2015-08-08 13:15:00 +02:00
+author: Fabien Penso
+photo: http://penso.info/img/realtime-highcharts.jpg
 ---
 
-__Just looking for the code?__ Check [ <i class="icon-github"></i> this github
+TL;DR — I started writing this article a long time ago while I was working for
+[@mickael](https://twitter.com/mickael) at
+[ProcessOne](https://www.process-one.net/en/). I never finished this article
+and a few things changed since but it might still help you to do realtime
+analytics for your service.
+
+While I now work for [Cloudscreener](http://www.cloudscreener.com) as their CTO
+I highly recommend to join [@mickael](https://twitter.com/mickael) if you work
+in Instant Messaging.
+
+__Just looking for the code?__ Check [<i class="icon-github"></i> this github
 repository](https://github.com/penso/blog-sse/).
 
-When I need realtime analytics I use:
+***
 
- * [Batsd](https://github.com/noahhl/batsd) for storing datapoints.
+When I need to show realtime analytics to users I use:
+
+ * [Batsd](https://github.com/noahhl/batsd) for storing datapoints.[^1]
  * [Highcharts](http://www.highcharts.com) to display the datapoints.
  * Server Side Events for the realtime part in the browser.
 
@@ -25,8 +39,8 @@ easily subscribe to this to deliver realtime datapoints back to the browser.
 the past year, and I would suggest looking for an alternative or just using the
 original [statsd](https://github.com/etsy/statsd/).
 
-[Highcharts](http://www.highcharts.com) graph is nice, but these days everyone
-wants realtime and the charts only isn't enough anymore. We already use
+[Highcharts](http://www.highcharts.com) is nice, but these days everyone
+wants realtime and the charts alone isn't enough. We already use
 [batsd](https://github.com/noahhl/batsd) (a
 [statsd](https://github.com/etsy/statsd) replacement by
 [37signals](http://www.37signals.com/), using Ruby) to store all analytics. It
@@ -97,43 +111,69 @@ about 20 or 30 seconds, to fix this you must add `proxy_buffering off;` to your
 server:
 
     server {
-	   root /home/penso/push_console/public/;
-	   index index.html index.htm;
-	   server_name localhost;
+     root /home/penso/push_console/public/;
+     index index.html index.htm;
+     server_name localhost;
 
-	   location / {
-		  proxy_set_header  X-Real-IP  $remote_addr;
-		  proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
-		  proxy_set_header Host $http_host;
-		  proxy_redirect off;
-		  proxy_max_temp_file_size 0;
-		  proxy_buffering off; # <----------- here
+     location / {
+      proxy_set_header  X-Real-IP  $remote_addr;
+      proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Host $http_host;
+      proxy_redirect off;
+      proxy_max_temp_file_size 0;
+      proxy_buffering off; # <----------- here
 
-		  if (-f $request_filename) {
-			 break;
-		  }
+      if (-f $request_filename) {
+       break;
+      }
 
-		  if (-f $request_filename/index.html) {
-			 rewrite (.*) $1/index.html break;
-		  }
-		  if (-f $request_filename.html) {
-			 rewrite (.*) $1.html break;
-		  }
+      if (-f $request_filename/index.html) {
+       rewrite (.*) $1/index.html break;
+      }
+      if (-f $request_filename.html) {
+       rewrite (.*) $1.html break;
+      }
 
-		  if (!-f $request_filename) {
-			 proxy_pass http://localhost:3000; # <--- redirection to thin
-			 break;
-		  }
-	   }
+      if (!-f $request_filename) {
+       proxy_pass http://localhost:3000; # <--- redirection to thin
+       break;
+      }
+     }
     }
 
-### Next Part
+### Part 2
 
-The next part of this article will explain how to use
-[batsd](https://github.com/noahhl/batsd) (with my patch) and
-[redis](http://www.redis.io) to have a realtime update of data you could send
-to [batsd](https://github.com/noahhl/batsd).
+The idea is to use `em-hiredis` do fetch data from redis. Write a `sinatra` app
+looking like:
 
-Sending me some love through social networks will push me to write part 2
-faster __;)__. You can reach me at
-[@fabienpenso](http://twitter.com/fabienpenso).
+    require 'em-hiredis'
+    class AnalyticsSSE < Sinatra::Base
+      get '/' do
+        sse_stream do |out|
+          ActiveRecord::Base.connection_pool.with_connection do
+            bucket_name = params[:id]
+            redis.pubsub.subscribe(bucket_name) do |msg|
+              unless msg.blank?
+                out.push event: bucker_name, data: msg.to_json
+              end
+            end
+          end
+        end
+      end
+    end
+    
+    # and add it to your routes like:
+    MyApp::Application.routes.draw do
+      mount AnalyticsSSE: '/realtime-analytics'
+    end
+
+Calling your URL as you can see [in my
+code](https://github.com/penso/blog-sse/blob/master/app/assets/javascripts/application.js#L61)
+allows you to receive real-time datapoints, you can finally add them to you
+graphs.
+
+***
+
+You can reach me at [@fabienpenso](http://twitter.com/fabienpenso).
+
+[^1]: Batsd doesn't get love anymore, I recommend going to statsd instead.
