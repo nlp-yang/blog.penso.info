@@ -13,11 +13,6 @@ end
 
 task :default => :server
  
-desc 'Build and deploy'
-task :deploy do
-  sh 'rsync -crtzh --progress --delete _site/ penso@plouf.4push.com:/data/www/fabien/penso.info/htdocs/'
-end
-
 desc 'Notify Google of the new sitemap'
 task :sitemap do
 	require 'net/http'
