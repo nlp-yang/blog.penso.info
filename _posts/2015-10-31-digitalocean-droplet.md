@@ -3,7 +3,7 @@ layout: post
 title: "Which Droplet should you get at DigitalOcean?"
 categories: 
 - computer
-description: I've just acquired
+description: If you think paying more at DigitalOcean gets you more CPU or IO, think again. The 512M instance gets you the most bang for your bucks, as I'm going to show you in this article.
 author: Fabien Penso
 date: 2015-10-31 17:00:00 +02:00
 photo: http://blog.penso.info/img/digitalocean.png
