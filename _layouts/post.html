@@ -6,7 +6,7 @@ layout: default
 
 	{% if page.photo %}
 	<div class="post_photo">
-		<img src="{{ page.photo }}" alt="{{ page.title | escape }}" itemprop="image"/>
+		<a href="{{ page.photo }}" target="_blank"><img src="{{ page.photo }}" alt="{{ page.title | escape }}" itemprop="image"/></a>
 	</div>
 	{% endif %}
 
