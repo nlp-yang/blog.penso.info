@@ -5,6 +5,6 @@ relative_permalinks: false
 title: Fabien Penso
 description: "Fabien Penso's blog"
 exclude: [".rvmrc", ".rbenv-version", "README", "Rakefile", "changelog.md", "sass_converter.rb", "Gemfile", "Gemfile.lock", ".tm_properties", "config.rb", "sass", "CNAME", "Procfile"]
-pygments: true
+highlighter: pygments
 permalink: /:year/:month/:day/:title/
 toplinks: ['about', 'archive', 'contact', 'hire']
