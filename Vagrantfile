@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder '.', '/vagrant'
 	config.vm.provision "shell", privileged: false, inline: <<-SHELL
 		sudo apt-get update
-		sudo apt-get install -y build-essential
+		sudo apt-get install -y build-essential vim ntp ntpdate git-core
 		curl -sSL https://get.rvm.io | bash
 		source /home/vagrant/.rvm/scripts/rvm
 		rvm requirements
