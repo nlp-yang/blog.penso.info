@@ -5,6 +5,7 @@ categories:
 - computer
 description: Faast is an iOS app to receive push notification from Twitter, Facebook, RSS Feeds and more
 photo: /img/faast_icon.png
+date: 2016-03-28 11:30:00 +0200
 ---
 
 TL;DR — **I've decided to sunset [Faast](http://www.faast.io), the Push app
